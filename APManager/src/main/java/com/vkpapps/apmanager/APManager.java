@@ -95,10 +95,10 @@ public class APManager {
     public void turnOnHotspot(Context context, OnSuccessListener onSuccessListener, OnFailureListener onFailureListener) {
         boolean providerEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
 
-        if (isDeviceConnectedToWifi()) {
-            onFailureListener.onFailure(ERROR_DISABLE_WIFI,null);
-            return;
-        }
+//        if (isDeviceConnectedToWifi()) {
+//            onFailureListener.onFailure(ERROR_DISABLE_WIFI,null);
+//            return;
+//        }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             if (utils.checkLocationPermission(context) && providerEnabled && !isWifiApEnabled()) {
